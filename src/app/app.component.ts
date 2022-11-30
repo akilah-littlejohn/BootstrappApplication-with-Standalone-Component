@@ -4,7 +4,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { FireModule } from '../fire/fire.module';
 import * as firebase from 'firebase/compat/app';
 
 @Component({
@@ -17,11 +16,11 @@ import * as firebase from 'firebase/compat/app';
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
-    FireModule,
+    
   ],
 })
 export class AppComponent {
-  constructor(public auth: AngularFireAuth, fr: FireModule) {}
+  constructor(public auth: AngularFireAuth) {}
   login() {
     let provider = new firebase.default.auth.GoogleAuthProvider();
     this.auth.signInWithPopup(provider);
