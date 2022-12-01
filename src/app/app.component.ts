@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 import * as firebase from 'firebase/compat/app';
 
 @Component({
@@ -16,7 +17,6 @@ import * as firebase from 'firebase/compat/app';
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
-    
   ],
 })
 export class AppComponent {
