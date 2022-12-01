@@ -25,4 +25,8 @@ export class AppComponent {
     let provider = new firebase.default.auth.GoogleAuthProvider();
     this.auth.signInWithPopup(provider);
   }
+
+  logout() {
+    this.auth.signOut();
+  }
 }
